@@ -6,6 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { typeOrmConfig } from './config/typeorm.config';
 import { UsersModule } from './modules/users/users.module';
 import { CategoryModule } from './modules/category/category.module';
+import { TransactionsModule } from './modules/transactions/transactions.module';
+import { GoalsModule } from './modules/goals/goals.module';
 
 @Module({
   imports: [
@@ -21,6 +23,8 @@ import { CategoryModule } from './modules/category/category.module';
     }),
     UsersModule,
     CategoryModule,
+    GoalsModule,
+    TransactionsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
